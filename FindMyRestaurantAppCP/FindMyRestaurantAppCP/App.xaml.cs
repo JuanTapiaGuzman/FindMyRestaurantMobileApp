@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using FindMyRestaurantAppCP.Views;
 using Xamarin.Forms;
 
 namespace FindMyRestaurantAppCP
@@ -13,7 +13,7 @@ namespace FindMyRestaurantAppCP
         {
             InitializeComponent();
 
-            MainPage = new FindMyRestaurantAppCP.MainPage();
+            MainPage = new Login();
         }
 
         protected override void OnStart()

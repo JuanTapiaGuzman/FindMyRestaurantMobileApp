@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FindMyRestaurantAppCP.MarkupExtensions"
+             x:Class="FindMyRestaurantAppCP.Views.Login"
+             BackgroundColor="DarkBlue">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="Logo.png" x:Name="iLogo" Opacity="1" Aspect="AspectFill"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.2,Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=.2,Constant=-30}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=.6,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=.4,Constant=0}" />
+            
+            <Entry Placeholder="User" PlaceholderColor="Gray" x:Name="sUser"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=iLogo, Property=X, Factor=1, Constant=-25}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=iLogo,Property=Y,Factor=1,Constant=270}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=iLogo,Property=Width,Factor=1,Constant=50}" />
+            
+            <Entry Placeholder="Password" PlaceholderColor="Gray" x:Name="sPassword"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=iLogo, Property=X, Factor=1, Constant=-25}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sUser,Property=Y,Factor=1,Constant=50}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sUser,Property=Width,Factor=1,Constant=0}" />
+            
+            <Button RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=iLogo, Property=X, Factor=1, Constant=-25}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sPassword,Property=Y,Factor=1,Constant=50}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=sPassword,Property=Width,Factor=1,Constant=0} "/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
