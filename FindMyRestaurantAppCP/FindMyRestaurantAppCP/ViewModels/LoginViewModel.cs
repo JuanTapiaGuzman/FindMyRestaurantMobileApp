@@ -1,4 +1,5 @@
 ﻿using FindMyRestaurantAppCP.Services;
+using FindMyRestaurantAppCP.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,15 @@ namespace FindMyRestaurantAppCP.ViewModels
 {
     class LoginViewModel : BaseViewModel
     {
+        public INavigation Navigation;
+
         public ICommand IngresarCommand { get; private set; }
         public ICommand BackActionCommand { get; private set; }
 
-        public LoginViewModel()
+        public LoginViewModel(INavigation navigation)
         {
-                IngresarCommand = new Command(Ingresar);
+            IngresarCommand = new Command(Ingresar);
+            Navigation = navigation;
         }
 
         private string _userName;
@@ -39,11 +43,11 @@ namespace FindMyRestaurantAppCP.ViewModels
 
             if(valido)
             {
-                
+                await App.Master.Navigation.PushModalAsync(new ListadoRestaurantes());
             }
             else
             {
-                
+                await App.Master.DisplayAlert("Aviso", "Usuario o contraseña invalidos", "OK");
             }
         }
     }

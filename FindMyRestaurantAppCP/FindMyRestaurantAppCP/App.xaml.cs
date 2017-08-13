@@ -9,6 +9,14 @@ namespace FindMyRestaurantAppCP
 {
     public partial class App : Application
     {
+        public static Login Master
+        {
+            get
+            {
+                return (Login)Application.Current.MainPage;
+            }
+        }
+
         public App()
         {
             InitializeComponent();

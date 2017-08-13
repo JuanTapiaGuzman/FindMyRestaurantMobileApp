@@ -15,7 +15,7 @@ namespace FindMyRestaurantAppCP.Views
     {
         public Login()
         {
-            BindingContext = new LoginViewModel();
+            BindingContext = new LoginViewModel(Navigation);
             InitializeComponent();
         }
     }
