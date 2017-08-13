@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FindMyRestaurantAppCP.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace FindMyRestaurantAppCP.Views
     {
         public Login()
         {
+            BindingContext = new LoginViewModel();
             InitializeComponent();
         }
     }
